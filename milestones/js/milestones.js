@@ -44,6 +44,7 @@
 			/*-----------------------------
 			Insert the Milestone components
 			------------------------------*/
+			$(this).addClass('milestones');
 			$(this).html('<div class="progress"><div class="progress-bar" role="progressbar" style="width:'+len+'%"> </div></div><div class="stage"></div><div class="labels"></div><div class="alt-label">Next Action: <span>'+labels[stage]+'</span></div>');
 
 			/*-----------------------------
