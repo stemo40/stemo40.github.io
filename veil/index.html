@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<head>
+	<title>Veil jQuery Plugin</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="veil.css">
+</head>
+<body><br><br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Veil jQuery Plugin</h1>
+				<a href="#" data-veil-id="myModal" class="veil" data-veil-animationspeed="150" data-veil-closeonbgclick="false" data-veil-animation="pop" data-veil-closeclass="close-veil" data-veil-title="NCPC Information" data-veil-opacity="40">Click Here</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="veil.js"></script>
+	<script>
+		$(function(){
+			$('.veil').veil({
+				width:620,
+				height:519,
+				bgcolor: '#000'
+			});
+		});
+
+	</script>
+	<div id="myModal" class="veil-modal-container">
+		<img src="/Images/Region_enlarged.jpg"/>
+		<div class="veil-footer"><input type="button" value="Close" class="btn-default veil-close"/></div>
+	</div>
+
+</body>
+</html>
