@@ -14,11 +14,11 @@
 		Default settings
 		--------------------------*/
 		var settings = $.extend({
-			labels					  : ["Step1","Step2","Step3","Step4"], 		// Array of labels for each milestone
-			stage				      : 2,		                                //
-			checks         		: 2,
-			checkclass    		: 'checkmark',
-			stageclass    		: 'past',
+			labels        : ["Step1","Step2","Step3","Step4"],  // Array of labels for each milestone
+			position      : 2,                                  // Position of the progress bar
+			checks        : 2,                                  // Number of checkmarks
+			checkclass    : 'ms-checkmark',                     // Class for the checkmark
+			msclass       : 'ms-tick-checked',                  // Class for the finished milestones
 		}, options );
 
 		return this.each( function() {
@@ -28,10 +28,10 @@
 			--------------------------*/
 			var id = $(this).attr('id');
 			var labels = ($(this).data('labels') != undefined ? $(this).data('labels') : settings.labels);
-			var stage = ($(this).data('stage') != undefined ? $(this).data('stage')-1 : settings.stage-1);
+			var position = ($(this).data('position') != undefined ? $(this).data('position')-1 : settings.position-1);
 			var checks = ($(this).data('checks') != undefined ? $(this).data('checks')-1 : settings.checks-1);
 			var checkclass = ($(this).data('checkclass') != undefined ? $(this).data('checkclass') : settings.checkclass);
-			var stageclass = ($(this).data('stageclass') != undefined ? $(this).data('stageclass') : settings.stageclass);
+			var msclass = ($(this).data('msclass') != undefined ? $(this).data('msclass') : settings.msclass);
 
 			/*--------------------------
 			Set variables based on globals
@@ -39,38 +39,38 @@
 			var ticks = labels.length;
 			var div = ticks-1;
 			var per = 100 / div;
-			var len = stage * per;
+			var len = position * per;
 
 			/*-----------------------------
 			Insert the Milestone components
 			------------------------------*/
 			$(this).addClass('milestones');
-			$(this).html('<div class="progress"><div class="progress-bar" role="progressbar" style="width:'+len+'%"> </div></div><div class="stage"></div><div class="labels"></div><div class="alt-label">Next Action: <span>'+labels[stage]+'</span></div>');
+			$(this).html('<div class="progress"><div class="progress-bar" role="progressbar" style="width:'+len+'%"> </div></div><div class="stage"></div><div class="labels"></div><div class="ms-alt-label">Next Action: <span>'+labels[position]+'</span></div>');
 
 			/*-----------------------------
 			Iterate to define the tickmarks
 			and checkmarks
 			------------------------------*/
-			for (x=0;x<=div;x++){
+			for (x = 0;x <= div;x++){
 				var lft = (per*x)-.4;
 				if (x <= checks){
 					var icon = '<i class="fa fa-check '+checkclass+'"></i>';
-					var cls = ' '+stageclass;
+					var cls = ' '+msclass;
 				}else{
 					var icon = '';
-					var cls = ' forward';
+					var cls = ' ms-tick-empty';
 				}
 				if (x == 0){
-					$("#"+id+" .stage").append('<span class="tick first'+cls+'">'+icon+'</span>');
-					$("#"+id+" .labels").append('<label class="tick-label first"><span>'+labels[x]+'</span></label>');
+					$("#"+id+" .stage").append('<span class="ms-tick first'+cls+'">'+icon+'</span>');
+					$("#"+id+" .labels").append('<label class="ms-tick-label first"><span>'+labels[x]+'</span></label>');
 				}else if (x == div){
-					$("#"+id+" .stage").append('<span class="tick last'+cls+'">'+icon+'</span>');
-					$("#"+id+" .labels").append('<label class="tick-label last"><span>'+labels[x]+'</span></label>');
+					$("#"+id+" .stage").append('<span class="ms-tick last'+cls+'">'+icon+'</span>');
+					$("#"+id+" .labels").append('<label class="ms-tick-label last"><span>'+labels[x]+'</span></label>');
 				}else{
 					var n = labels[x].length/5;
 					var llft = (per*x)-n;
-					$("#"+id+" .stage").append('<span class="tick'+cls+'" style="left:'+lft+'%">'+icon+'</span>');
-					$("#"+id+" .labels").append('<label class="tick-label" style="left:'+llft+'%"><span>'+labels[x]+'</span></label>');
+					$("#"+id+" .stage").append('<span class="ms-tick'+cls+'" style="left:'+lft+'%">'+icon+'</span>');
+					$("#"+id+" .labels").append('<label class="ms-tick-label" style="left:'+llft+'%"><span>'+labels[x]+'</span></label>');
 				}
 			}
 		});
