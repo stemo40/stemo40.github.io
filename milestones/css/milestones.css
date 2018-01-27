@@ -52,6 +52,14 @@
 	margin-top:-10px;
 	margin-left:-3px;
 }
+.ms-checked{
+	background-image: -webkit-linear-gradient(top, #EEBC11 0%, #E67300 100%);
+	background-image: -o-linear-gradient(top, #EEBC11 0%, #E67300 100%);
+	background-image: linear-gradient(to bottom, #EEBC11 0%, #E67300 100%);
+	color:transparent;
+	-webkit-background-clip: text;
+	-clip: text;
+}
 .ms-checkmark{
 	background-image: -webkit-linear-gradient(top, #333 0%, #666 100%);
 	background-image: -o-linear-gradient(top, #333 0%, #666 100%);
