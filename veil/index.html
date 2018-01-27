@@ -6,9 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="veil.css">
+	<style>
+	body{background:#7195B9}
+	.container{background:#fff;padding:15px 45px}
+	</style>
 </head>
 <body><br><br><br>
-	<div class="container">
+	<div class="container" id="blur">
 		<div class="row">
 			<div class="col-md-12">
 				<h1>Veil jQuery Plugin</h1>
@@ -29,6 +33,7 @@
 			$('.veil').veil({
 				width:644,
 				height:548,
+				blurid:'blur',
 			});
 		});
 
