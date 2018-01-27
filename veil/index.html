@@ -22,7 +22,7 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<a href="#" data-veil-id="myModal" class="veil btn btn-default" data-veil-animationspeed="150" data-veil-closeonbgclick="false" data-veil-animation="pop" data-veil-closeclass="close-veil" data-veil-title="Information" data-veil-opacity="40" id="mw1">Click Here</a>
+				<a href="#" data-veil-id="m1Modal" class="veil btn btn-default" data-veil-animationspeed="150" data-veil-closeonbgclick="false" data-veil-animation="pop" data-veil-closeclass="close-veil" data-veil-title="Information" data-veil-opacity="40" id="mw1">Image with Blur</a> <a href="#" data-veil-id="m2Modal" class="veil btn btn-primary" data-veil-animationspeed="250" data-veil-closeonbgclick="true" data-veil-animation="slide" data-veil-closeclass="close-veil" data-veil-title="Some Title" data-veil-opacity="40" id="mw2">Text no Blur</a>
 				<br>
 			</div>
 		</div>
@@ -45,12 +45,17 @@
 				bgcolor:'#000',
 				blurid:'#blurme',
 			});
+			$('#mw2').veil();
 		});
 
 	</script>
-	<div id="myModal" class="veil-modal-container">
+	<div id="m1Modal" class="veil-modal-container">
 		<img src="img/washington.jpg"/>
 		<div class="veil-footer"><input type="button" value="Close" class="btn btn-default veil-close"/></div>
+	</div>
+	<div id="m2Modal" class="veil-modal-container">
+<h3>Test Modal</h3>
+Diam vel quam elementum pulvinar. Volutpat diam ut venenatis tellus. Vitae purus faucibus ornare suspendisse sed nisi lacus. Nulla at volutpat diam ut venenatis. Arcu dictum varius duis at consectetur lorem donec massa. Erat velit scelerisque in dictum non consectetur. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Vel eros donec ac odio. Non arcu risus quis varius quam quisque id diam.
 	</div>
 
 </body>
