@@ -59,7 +59,7 @@
 	color:transparent;
 	-webkit-background-clip: text;
 	-clip: text;
-}
+} 
 .ms-checkmark{
 	background-image: -webkit-linear-gradient(top, #333 0%, #666 100%);
 	background-image: -o-linear-gradient(top, #333 0%, #666 100%);
