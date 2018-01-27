@@ -109,7 +109,7 @@
 
 
 				/*----------------------------
-				Set several veriables based on
+				Set several variables based on
 				data tag or settings
 				----------------------------*/
 				if ($(this).data('veil-opacity') != undefined) {
