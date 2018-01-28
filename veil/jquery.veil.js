@@ -82,9 +82,9 @@
 
 				if ($(this).data('veil-title') != undefined) {
 					hh = hh+48;
-					var title = '<span id="veil-title"><div class="veil-title">'+ $(this).data('veil-title') +'</div><a class="close-veil close-veil-title"></a></span>';
+					var title = '<div id="veil-title"><div class="veil-title">'+ $(this).data('veil-title') +'</div><a class="close-veil close-veil-title"></a></div>';
 				}else if (settings.title != null) {
-					var title = '<span id="veil-title"><div class="veil-title">'+ settings.title +'</div><a class="close-veil close-veil-title"></a></span>';
+					var title = '<div id="veil-title"><div class="veil-title">'+ settings.title +'</div><a class="close-veil close-veil-title"></a></div>';
 				}else {
 					var title = null;
 				}
