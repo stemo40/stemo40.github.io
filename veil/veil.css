@@ -27,6 +27,9 @@
 	filter:url(img/blur.svg#blur);
 	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
 }
+.veil-modal-container img{
+width:100%;
+}
 .veil-modal-container{
 	display:none;
 	background: #fff;
@@ -45,10 +48,20 @@
 
 }
 .veil-modal-container .veil-frame{
+	position:relative;
 	padding:0;
 	margin:0;
+	width:100%;
+border:1px solid red;
+}
+#veil-iframe{
+display:block;
+width:100%;
+overflow-y:auto;
+overflow-x:hidden;
 }
 .veil-modal-container .veil-box{
+	position:relative;
 	background:#fff;
 	padding:20px;
 }

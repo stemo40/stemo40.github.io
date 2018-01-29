@@ -14,6 +14,7 @@
 * 5. Set the left position of the dialog
 * 6. New 'slide' animation
 * 7. New frosted glass background
+* 8. New blurred background
 * See the example file for more info
 */
 ;(function ( $ ) {
@@ -104,8 +105,8 @@
 				}else{
 					$('#veil-title').remove();
 				}
-
-				$('.veil-frame').html('<iframe src="'+source+'" width="'+w+'" height="'+h+'" id="veil-iframe" frameborder="0" />');
+var ih = h-25;
+				$('.veil-frame').html('<iframe src="'+source+'" width="100%" height="'+ih+'" id="veil-iframe" frameborder="0" seamless></iframe>');
 
 
 				/*----------------------------
