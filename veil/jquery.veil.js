@@ -105,9 +105,10 @@
 				}else{
 					$('#veil-title').remove();
 				}
+if (source != null){
 var ih = h-25;
 				$('.veil-frame').html('<iframe src="'+source+'" width="100%" height="'+ih+'" id="veil-iframe" frameborder="0" seamless></iframe>');
-
+}
 
 				/*----------------------------
 				Set several variables based on
