@@ -300,7 +300,7 @@ var ih = h-25;
 							unlockModal();
 						}
 						$(blurID).removeClass('blur');
-						$('.veil-title').remove();
+						setTimeout(function(){$('.veil-title').remove()},500);
 						modal.off('veil:close');
 					}
 
