@@ -318,13 +318,13 @@ var ih = h-25;
 				modal.trigger('veil:open')
 
 				//Close Modal Listeners
-				var closeButton = $('.' + dismiss).bind('click.modalEvent', function() {
+				var closeButton = $('.' + dismiss).on('click.modalEvent', function() {
 					modal.trigger('veil:close')
 				});
 				// close on background click
 				if(closeonbg) {
 					modalBG.css({"cursor":"pointer"})
-					modalBG.bind('click.modalEvent', function () {
+					modalBG.on('click.modalEvent', function () {
 						modal.trigger('veil:close')
 					});
 				}
