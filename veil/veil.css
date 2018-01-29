@@ -45,20 +45,23 @@ width:100%;
 	-webkit-border-radius:12px;
 	-moz-border-radius:12px;
 	border-radius:12px;
-
+  overflow:hidden;
 }
 .veil-modal-container .veil-frame{
 	position:relative;
 	padding:0;
 	margin:0;
 	width:100%;
-border:1px solid red;
+	overflow-x:hidden;
+	overflow-y:auto;
 }
 #veil-iframe{
 display:block;
-width:100%;
-overflow-y:auto;
-overflow-x:hidden;
+width:98.4%;
+overflow:hidden;
+}
+::-webkit-scrollbar {  
+    display: none;
 }
 .veil-modal-container .veil-box{
 	position:relative;

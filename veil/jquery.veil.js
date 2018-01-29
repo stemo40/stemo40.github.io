@@ -107,7 +107,7 @@
 				}
 if (source != null){
 var ih = h-25;
-				$('.veil-frame').html('<iframe src="'+source+'" width="100%" height="'+ih+'" id="veil-iframe" frameborder="0" seamless></iframe>');
+				$('.veil-frame').css({'height':ih+'px'}).html('<iframe src="'+source+'" width="100%" height="'+ih+'" id="veil-iframe" frameborder="0" seamless scrolling="no"></iframe>');
 }
 
 				/*----------------------------
