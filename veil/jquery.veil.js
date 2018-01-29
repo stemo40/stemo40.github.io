@@ -279,7 +279,7 @@ var ih = h-25;
 							}, speed, function() {
 								modal.css({
 									'opacity' : 1,
-									'top' : topMeasure
+									'top' : modalTop
 								}).hide();
 								unlockModal();
 							});
