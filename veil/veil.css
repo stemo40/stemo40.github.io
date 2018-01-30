@@ -51,7 +51,7 @@ width:100%;
 	position:relative;
 	padding:0;
 	margin:0;
-	width:100%;
+	width:99.2%;
 	overflow-x:hidden;
 	overflow-y:auto;
 }
@@ -60,9 +60,7 @@ display:block;
 width:98.4%;
 overflow:hidden;
 }
-::-webkit-scrollbar {  
-    display: none;
-}
+
 .veil-modal-container .veil-box{
 	position:relative;
 	background:#fff;
@@ -79,7 +77,10 @@ overflow:hidden;
 	border-bottom:1px solid #ccc;
 }
 .veil-modal-container .veil-footer{
+	position:relative;
+	display:inline-block;
 	height:42px;
+	width:100%;
 	line-height:42px;
 	padding:0 15px;
 	vertical-align:middle;
@@ -87,7 +88,8 @@ overflow:hidden;
 	border-top:1px solid #ccc;
 }
 .veil-footer input[type="button"]{
-	margin-top:4px
+  position:absolute;
+  margin-top:5px;
 }
 .veil-modal-container .close-veil-modal {
 	position: absolute;
